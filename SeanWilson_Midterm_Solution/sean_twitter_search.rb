@@ -53,23 +53,26 @@ loop do
     search_this("sean_a_wilson")
     search_tweets
     show_tweets
+    break
   elsif user_input == 2
-    suprise = suprises_available.sample
-    suprise_read = humanize(suprise)
-    puts "You're suprise search is #{suprise_read}"
-    search_this(suprise)
+    suprise_read = humanize(suprises_available.sample)
+    puts "You're suprise search is #{suprise_read.gsub("%20"," ")}"
+    search_this(suprise_read)
     search_tweets
     show_tweets
+    break
   elsif user_input == 3
     puts "Alright, what would you like to search on Twitter?"
     user_search = gets.chomp.gsub(" ", "%20")
     search_this(user_search)
     search_tweets
     show_tweets
+    break
   elsif user_input == 4
     search_this("Ryan%20Gossling%20cereal")
     search_tweets
     show_tweets
+    break
   elsif user_input == 5
     break
   else

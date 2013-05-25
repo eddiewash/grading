@@ -1,5 +1,7 @@
 require 'json'
 require 'rest-client'
+require 'time' # This is an additional gem that will let you parse the json "tweet["created_at"]"
+              # and turn it into a time object in order to format it in a nicer way
 require_relative 'tweet'
 require_relative 'search'
 

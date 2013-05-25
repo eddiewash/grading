@@ -4,9 +4,9 @@ class Tweet
     @user = user
     @user_name = user_name
     @tweet_text = tweet_text
-    @time = time
+    @time = Time.parse(time)
   end
   def to_s
-    puts "#{user} (#{user_name}) tweeted: #{tweet_text}\n#{time}"
+    "\n#{time.strftime("%m/%d/%Y: #{user}(#{user_name}) tweeted at %I:%M%p")}\n#{tweet_text}" # .strftime is a ruby method that lets you display the time in a more readable way, but only works on a "time" object
   end
 end
